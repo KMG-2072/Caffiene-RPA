@@ -121,7 +121,7 @@
                 <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="e1c678e5-207c-400a-99ae-41afb5562631" InformativeScreenshot="5c7af6f99d5e53a74d40ceb00138a4d2">
                   <ui:Target.Selector>
                     <InArgument x:TypeArguments="x:String">
-                      <mca:CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_28">String.Format("&lt;webctrl aaname='Add Group' aria-role='button' tag='BUTTON' idx='{0}' /&gt;", in_group_idx)</mca:CSharpValue>
+                      <mca:CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_29">String.Format("&lt;webctrl aaname='Add Group' aria-role='button' tag='BUTTON' idx='{0}' /&gt;", in_parentGroupIdx)</mca:CSharpValue>
                     </InArgument>
                   </ui:Target.Selector>
                   <ui:Target.TimeoutMS>
