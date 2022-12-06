@@ -3,7 +3,7 @@
     <x:Property Name="In_groups" Type="InArgument(s:String[])" />
   </x:Members>
   <sap2010:ExpressionActivityEditor.ExpressionActivityEditor>C#</sap2010:ExpressionActivityEditor.ExpressionActivityEditor>
-  <sap:VirtualizedContainerService.HintSize>905,1267</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>768,1267</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>ActivityBuilder_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -209,6 +209,9 @@
                 </InOutArgument>
                 <InArgument x:TypeArguments="sd:DataRow[]" x:Key="in_filters">
                   <mca:CSharpValue x:TypeArguments="sd:DataRow[]" sap2010:WorkflowViewState.IdRef="CSharpValue`1_4">Filters</mca:CSharpValue>
+                </InArgument>
+                <InArgument x:TypeArguments="x:Int32" x:Key="in_parentGroupIdx">
+                  <Literal x:TypeArguments="x:Int32" Value="1" />
                 </InArgument>
               </ui:InvokeWorkflowFile.Arguments>
             </ui:InvokeWorkflowFile>

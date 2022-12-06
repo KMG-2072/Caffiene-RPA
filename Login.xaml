@@ -5,7 +5,7 @@
     <x:Property Name="in_user" Type="InArgument(x:String)" />
   </x:Members>
   <sap2010:ExpressionActivityEditor.ExpressionActivityEditor>C#</sap2010:ExpressionActivityEditor.ExpressionActivityEditor>
-  <sap:VirtualizedContainerService.HintSize>905,2831</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>833,2831</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>ActivityBuilder_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -126,7 +126,12 @@
               </ui:Click.Target>
             </ui:Click>
             <Delay Duration="00:00:10" sap:VirtualizedContainerService.HintSize="725,22" sap2010:WorkflowViewState.IdRef="Delay_1" />
-            <ui:GetRobotCredential TimeoutMS="{x:Null}" AssetName="Tom" DisplayName="Get Credential" FolderPath="Shared" sap:VirtualizedContainerService.HintSize="725,79" sap2010:WorkflowViewState.IdRef="GetRobotCredential_1">
+            <ui:GetRobotCredential TimeoutMS="{x:Null}" DisplayName="Get Credential" FolderPath="Shared" sap:VirtualizedContainerService.HintSize="725,79" sap2010:WorkflowViewState.IdRef="GetRobotCredential_1">
+              <ui:GetRobotCredential.AssetName>
+                <InArgument x:TypeArguments="x:String">
+                  <mca:CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_8">in_user</mca:CSharpValue>
+                </InArgument>
+              </ui:GetRobotCredential.AssetName>
               <ui:GetRobotCredential.Password>
                 <OutArgument x:TypeArguments="ss:SecureString">
                   <mca:CSharpReference x:TypeArguments="ss:SecureString" sap2010:WorkflowViewState.IdRef="CSharpReference`1_8">password</mca:CSharpReference>
