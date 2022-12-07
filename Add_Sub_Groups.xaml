@@ -1,4 +1,4 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="Add_Sub_Groups" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mca="clr-namespace:Microsoft.CSharp.Activities;assembly=System.Activities" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:sc="clr-namespace:System.Collections;assembly=mscorlib" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=mscorlib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data" xmlns:this="clr-namespace:" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="Add_Sub_Groups" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mca="clr-namespace:Microsoft.CSharp.Activities;assembly=System.Activities" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=mscorlib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data" xmlns:this="clr-namespace:" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <x:Members>
     <x:Property Name="in_groups" Type="InArgument(s:String[])" />
   </x:Members>
@@ -8,7 +8,7 @@
     </InArgument>
   </this:Add_Sub_Groups.in_groups>
   <sap2010:ExpressionActivityEditor.ExpressionActivityEditor>C#</sap2010:ExpressionActivityEditor.ExpressionActivityEditor>
-  <sap:VirtualizedContainerService.HintSize>1484,2159</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1484,1559</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>ActivityBuilder_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -89,7 +89,7 @@
       <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="Add_Sub_Groups" sap:VirtualizedContainerService.HintSize="805,1454" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="Add_Sub_Groups" sap:VirtualizedContainerService.HintSize="849,1454" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="sd:DataTable" Name="FiltersDT" />
       <Variable x:TypeArguments="sd:DataTable" Name="GroupsDT" />
@@ -102,21 +102,21 @@
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:ReadRange AddHeaders="True" DisplayName="Read Range" sap:VirtualizedContainerService.HintSize="763,87" sap2010:WorkflowViewState.IdRef="ReadRange_1" Range="A:C" SheetName="Groups Data" WorkbookPath="Data\Config.xlsx">
+    <ui:ReadRange AddHeaders="True" DisplayName="Read Range" sap:VirtualizedContainerService.HintSize="807,87" sap2010:WorkflowViewState.IdRef="ReadRange_1" Range="A:C" SheetName="Groups Data" WorkbookPath="Data\Config.xlsx">
       <ui:ReadRange.DataTable>
         <OutArgument x:TypeArguments="sd:DataTable">
           <mca:CSharpReference x:TypeArguments="sd:DataTable" sap2010:WorkflowViewState.IdRef="CSharpReference`1_1">GroupsDT</mca:CSharpReference>
         </OutArgument>
       </ui:ReadRange.DataTable>
     </ui:ReadRange>
-    <ui:ReadRange AddHeaders="True" DisplayName="Read Range" sap:VirtualizedContainerService.HintSize="763,87" sap2010:WorkflowViewState.IdRef="ReadRange_2" Range="A:D" SheetName="Filters" WorkbookPath="Data\Config.xlsx">
+    <ui:ReadRange AddHeaders="True" DisplayName="Read Range" sap:VirtualizedContainerService.HintSize="807,87" sap2010:WorkflowViewState.IdRef="ReadRange_2" Range="A:D" SheetName="Filters" WorkbookPath="Data\Config.xlsx">
       <ui:ReadRange.DataTable>
         <OutArgument x:TypeArguments="sd:DataTable">
           <mca:CSharpReference x:TypeArguments="sd:DataTable" sap2010:WorkflowViewState.IdRef="CSharpReference`1_2">FiltersDT</mca:CSharpReference>
         </OutArgument>
       </ui:ReadRange.DataTable>
     </ui:ReadRange>
-    <ui:InvokeCode ContinueOnError="{x:Null}" Code="GroupGraph=new Dictionary&lt;String,List&lt;String&gt;&gt;();&#xA;out_vertices=new Dictionary&lt;String,Int32&gt;();&#xA;int index=0;&#xA;foreach (System.Data.DataRow row in GroupsDT.Rows)&#xA;{if (row[&quot;Group#&quot;].ToString()==&quot;&quot;){&#xA;&#x9;break;&#xA;}&#xA;GroupGraph[row[&quot;Group#&quot;].ToString()]=new List&lt;String&gt;();&#xA;out_vertices[row[&quot;Group#&quot;].ToString()]=index;&#xA;index++;&#xA;foreach (System.Data.DataRow subRow in GroupsDT.Select(&quot;[Parent Group]='&quot;+row[&quot;Group#&quot;].ToString()+&quot;'&quot;)){&#xA;&#x9;GroupGraph[row[&quot;Group#&quot;].ToString()].Add(subRow[&quot;Group#&quot;].ToString());&#xA;}&#xA;}" DisplayName="Invoke code" sap:VirtualizedContainerService.HintSize="763,164" sap2010:WorkflowViewState.IdRef="InvokeCode_1" Language="CSharp">
+    <ui:InvokeCode ContinueOnError="{x:Null}" Code="GroupGraph=new Dictionary&lt;String,List&lt;String&gt;&gt;();&#xA;out_vertices=new Dictionary&lt;String,Int32&gt;();&#xA;int index=0;&#xA;foreach (System.Data.DataRow row in GroupsDT.Rows)&#xA;{if (row[&quot;Group#&quot;].ToString()==&quot;&quot;){&#xA;&#x9;break;&#xA;}&#xA;GroupGraph[row[&quot;Group#&quot;].ToString()]=new List&lt;String&gt;();&#xA;out_vertices[row[&quot;Group#&quot;].ToString()]=index;&#xA;index++;&#xA;foreach (System.Data.DataRow subRow in GroupsDT.Select(&quot;[Parent Group]='&quot;+row[&quot;Group#&quot;].ToString()+&quot;'&quot;)){&#xA;&#x9;GroupGraph[row[&quot;Group#&quot;].ToString()].Add(subRow[&quot;Group#&quot;].ToString());&#xA;}&#xA;}" DisplayName="Invoke code" sap:VirtualizedContainerService.HintSize="807,164" sap2010:WorkflowViewState.IdRef="InvokeCode_1" Language="CSharp">
       <ui:InvokeCode.Arguments>
         <InArgument x:TypeArguments="sd:DataTable" x:Key="GroupsDT">
           <mca:CSharpValue x:TypeArguments="sd:DataTable" sap2010:WorkflowViewState.IdRef="CSharpValue`1_8">GroupsDT</mca:CSharpValue>
@@ -132,7 +132,7 @@
         </OutArgument>
       </ui:InvokeCode.Arguments>
     </ui:InvokeCode>
-    <ui:InvokeCode ContinueOnError="{x:Null}" Code="out_valid=true;&#xA;bool DFS(String vertex,bool[] Visited){&#xA;&#x9;Visited[in_vertices[vertex]]=true;&#xA;&#x9;bool valid=true;&#xA;&#x9;foreach(String Group in GroupGraph[vertex]){&#xA;&#x9;&#x9;if (Visited[in_vertices[Group]] == false){&#xA;            valid=DFS(Group,Visited);}&#xA;&#x9;&#x9;else{&#xA;&#x9;&#x9;&#x9;valid= false;&#xA;&#x9;&#x9;&#x9;}&#xA;&#x9;&#x9;if(!valid){&#xA;&#x9;&#x9;&#x9;break;&#xA;&#x9;&#x9;}&#xA;&#x9;}&#xA;&#x9;&#xA;&#x9;return valid;&#xA;};&#xA;foreach(String Group in in_groups){&#xA;&#x9;bool[] Visited=new bool[GroupGraph.Count];&#xA;&#x9;if (!DFS(Group,Visited)){&#xA;&#x9;&#x9;out_valid=false;&#xA;&#x9;&#x9;break;&#xA;&#x9;}&#xA;&#x9;&#xA;}" DisplayName="Invoke code" sap:VirtualizedContainerService.HintSize="763,164" sap2010:WorkflowViewState.IdRef="InvokeCode_2" Language="CSharp">
+    <ui:InvokeCode ContinueOnError="{x:Null}" Code="out_valid=true;&#xA;bool DFS(String vertex,bool[] Visited){&#xA;&#x9;Visited[in_vertices[vertex]]=true;&#xA;&#x9;bool valid=true;&#xA;&#x9;foreach(String Group in GroupGraph[vertex]){&#xA;&#x9;&#x9;if (Visited[in_vertices[Group]] == false){&#xA;            valid=DFS(Group,Visited);}&#xA;&#x9;&#x9;else{&#xA;&#x9;&#x9;&#x9;valid= false;&#xA;&#x9;&#x9;&#x9;}&#xA;&#x9;&#x9;if(!valid){&#xA;&#x9;&#x9;&#x9;break;&#xA;&#x9;&#x9;}&#xA;&#x9;}&#xA;&#x9;&#xA;&#x9;return valid;&#xA;};&#xA;foreach(String Group in in_groups){&#xA;&#x9;bool[] Visited=new bool[GroupGraph.Count];&#xA;&#x9;if (!DFS(Group,Visited)){&#xA;&#x9;&#x9;out_valid=false;&#xA;&#x9;&#x9;break;&#xA;&#x9;}&#xA;&#x9;&#xA;}" DisplayName="Invoke code" sap:VirtualizedContainerService.HintSize="807,164" sap2010:WorkflowViewState.IdRef="InvokeCode_2" Language="CSharp">
       <ui:InvokeCode.Arguments>
         <InArgument x:TypeArguments="s:String[]" x:Key="in_groups">
           <mca:CSharpValue x:TypeArguments="s:String[]" sap2010:WorkflowViewState.IdRef="CSharpValue`1_9">in_groups</mca:CSharpValue>
@@ -148,7 +148,7 @@
         </InArgument>
       </ui:InvokeCode.Arguments>
     </ui:InvokeCode>
-    <If sap:VirtualizedContainerService.HintSize="763,609" sap2010:WorkflowViewState.IdRef="If_3">
+    <If sap:VirtualizedContainerService.HintSize="807,609" sap2010:WorkflowViewState.IdRef="If_3">
       <If.Condition>
         <InArgument x:TypeArguments="x:Boolean">
           <mca:CSharpValue x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="CSharpValue`1_25">Valid</mca:CSharpValue>
@@ -176,23 +176,12 @@
                 </Sequence>
               </ActivityAction>
             </ui:ForEach.Body>
-            <ui:ForEach.Values>
-              <InArgument x:TypeArguments="sc:IEnumerable">
-                <mca:CSharpValue x:TypeArguments="sc:IEnumerable" sap2010:WorkflowViewState.IdRef="CSharpValue`1_27">in_groups</mca:CSharpValue>
-              </InArgument>
-            </ui:ForEach.Values>
           </ui:ForEach>
-          <ui:CommentOut DisplayName="Comment Out" sap2010:WorkflowViewState.IdRef="CommentOut_5">
-            <ui:CommentOut.Body>
-              <Sequence DisplayName="Ignored Activities" sap2010:WorkflowViewState.IdRef="Sequence_14">
-                <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke Add Group workflow" sap:VirtualizedContainerService.HintSize="434,112" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_2" UnSafe="False" WorkflowFileName="Add Group.xaml">
-                  <ui:InvokeWorkflowFile.Arguments>
-                    <scg:Dictionary x:TypeArguments="x:String, Argument" />
-                  </ui:InvokeWorkflowFile.Arguments>
-                </ui:InvokeWorkflowFile>
-              </Sequence>
-            </ui:CommentOut.Body>
-          </ui:CommentOut>
+          <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke Add Group workflow" sap:VirtualizedContainerService.HintSize="434,112" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_2" UnSafe="False" WorkflowFileName="Add Group.xaml">
+            <ui:InvokeWorkflowFile.Arguments>
+              <scg:Dictionary x:TypeArguments="x:String, Argument" />
+            </ui:InvokeWorkflowFile.Arguments>
+          </ui:InvokeWorkflowFile>
         </Sequence>
       </If.Then>
       <If.Else>
@@ -210,9 +199,9 @@
         </Sequence>
       </If.Else>
     </If>
-    <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="763,51" sap2010:WorkflowViewState.IdRef="CommentOut_4">
+    <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="807,51" sap2010:WorkflowViewState.IdRef="CommentOut_4">
       <ui:CommentOut.Body>
-        <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="242,143" sap2010:WorkflowViewState.IdRef="Sequence_12">
+        <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="380,596" sap2010:WorkflowViewState.IdRef="Sequence_12">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
