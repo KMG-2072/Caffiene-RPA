@@ -6,7 +6,7 @@
     <x:Property Name="URL_DT" Type="InArgument(scg:Dictionary(x:String, x:String))" />
   </x:Members>
   <sap2010:ExpressionActivityEditor.ExpressionActivityEditor>C#</sap2010:ExpressionActivityEditor.ExpressionActivityEditor>
-  <sap:VirtualizedContainerService.HintSize>1177,9453</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1177,9423</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>ActivityBuilder_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -88,13 +88,13 @@
       <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="Create_List___Contacts" sap:VirtualizedContainerService.HintSize="1187,9388" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="Create_List___Contacts" sap:VirtualizedContainerService.HintSize="1187,9358" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <Sequence DisplayName="Create_List" sap:VirtualizedContainerService.HintSize="1145,9296" sap2010:WorkflowViewState.IdRef="Sequence_30">
+    <Sequence DisplayName="Create_List" sap:VirtualizedContainerService.HintSize="1145,9266" sap2010:WorkflowViewState.IdRef="Sequence_30">
       <Sequence.Variables>
         <Variable x:TypeArguments="x:String" Name="type" />
         <Variable x:TypeArguments="sd:DataTable" Name="FilteredData" />
@@ -431,7 +431,7 @@
       </ui:CommentOut>
       <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="1103,51" sap2010:WorkflowViewState.IdRef="CommentOut_8">
         <ui:CommentOut.Body>
-          <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="376,386" sap2010:WorkflowViewState.IdRef="Sequence_15">
+          <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="480,386" sap2010:WorkflowViewState.IdRef="Sequence_15">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -849,7 +849,7 @@
           </InArgument>
         </ui:LogMessage.Message>
       </ui:LogMessage>
-      <If sap:VirtualizedContainerService.HintSize="1103,4964" sap2010:WorkflowViewState.IdRef="If_5">
+      <If sap:VirtualizedContainerService.HintSize="1103,4934" sap2010:WorkflowViewState.IdRef="If_5">
         <If.Condition>
           <InArgument x:TypeArguments="x:Boolean">
             <mca:CSharpValue x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="CSharpValue`1_36">in_row["Type"].ToString()=="Static"</mca:CSharpValue>
@@ -862,7 +862,7 @@
           </scg:Dictionary>
         </sap:WorkflowViewStateService.ViewState>
         <If.Then>
-          <Sequence sap:VirtualizedContainerService.HintSize="1067,4777" sap2010:WorkflowViewState.IdRef="Sequence_24">
+          <Sequence sap:VirtualizedContainerService.HintSize="1067,4747" sap2010:WorkflowViewState.IdRef="Sequence_24">
             <Sequence.Variables>
               <Variable x:TypeArguments="s:String[]" Name="userArr" />
               <Variable x:TypeArguments="x:String" Name="user" />
@@ -1038,15 +1038,15 @@
                 </InArgument>
               </Assign.Value>
             </Assign>
-            <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="1025,221" sap2010:WorkflowViewState.IdRef="CommentOut_14">
+            <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="1025,51" sap2010:WorkflowViewState.IdRef="CommentOut_14">
               <ui:CommentOut.Body>
-                <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="242,143" sap2010:WorkflowViewState.IdRef="Sequence_42">
+                <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="560,803" sap2010:WorkflowViewState.IdRef="Sequence_42">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
-                  <ui:RetryScope DisplayName="Retry Scope" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="RetryScope_1" NumberOfRetries="16">
+                  <ui:RetryScope DisplayName="Retry Scope" sap:VirtualizedContainerService.HintSize="518,711" sap2010:WorkflowViewState.IdRef="RetryScope_1" NumberOfRetries="16">
                     <ui:RetryScope.ActivityBody>
                       <ActivityAction>
                         <Sequence DisplayName="Action" sap:VirtualizedContainerService.HintSize="476,537" sap2010:WorkflowViewState.IdRef="Sequence_18">
@@ -1115,17 +1115,23 @@
                     </ui:RetryScope.Condition>
                     <sap:WorkflowViewStateService.ViewState>
                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                        <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                         <x:Boolean x:Key="IsPinned">False</x:Boolean>
                       </scg:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>
                   </ui:RetryScope>
                 </Sequence>
               </ui:CommentOut.Body>
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
             </ui:CommentOut>
-            <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="1025,221" sap2010:WorkflowViewState.IdRef="CommentOut_13">
+            <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="1025,51" sap2010:WorkflowViewState.IdRef="CommentOut_13">
               <ui:CommentOut.Body>
-                <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="242,143" sap2010:WorkflowViewState.IdRef="Sequence_41">
+                <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="558,642" sap2010:WorkflowViewState.IdRef="Sequence_41">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -1209,6 +1215,12 @@
                   </ui:InterruptibleWhile>
                 </Sequence>
               </ui:CommentOut.Body>
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
             </ui:CommentOut>
             <ui:ForEach x:TypeArguments="x:String" CurrentIndex="{x:Null}" DisplayName="For Each" sap:VirtualizedContainerService.HintSize="1025,549" sap2010:WorkflowViewState.IdRef="ForEach`1_6">
               <ui:ForEach.Body>
@@ -1302,7 +1314,7 @@
               </ui:InvokeWorkflowFile.Arguments>
             </ui:InvokeWorkflowFile>
             <Delay Duration="00:00:02" sap:VirtualizedContainerService.HintSize="1025,22" sap2010:WorkflowViewState.IdRef="Delay_15" />
-            <If sap:VirtualizedContainerService.HintSize="1025,2101" sap2010:WorkflowViewState.IdRef="If_4">
+            <If sap:VirtualizedContainerService.HintSize="1025,2411" sap2010:WorkflowViewState.IdRef="If_4">
               <If.Condition>
                 <InArgument x:TypeArguments="x:Boolean">
                   <mca:CSharpValue x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="CSharpValue`1_46">in_action.ToUpper()=="SAVE&amp;CLOSE"</mca:CSharpValue>
@@ -1340,20 +1352,20 @@
                 </Sequence>
               </If.Then>
               <If.Else>
-                <Sequence sap:VirtualizedContainerService.HintSize="604,1943" sap2010:WorkflowViewState.IdRef="Sequence_23">
+                <Sequence sap:VirtualizedContainerService.HintSize="604,2253" sap2010:WorkflowViewState.IdRef="Sequence_23">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
-                  <If sap:VirtualizedContainerService.HintSize="562,1851" sap2010:WorkflowViewState.IdRef="If_3">
+                  <If sap:VirtualizedContainerService.HintSize="562,2161" sap2010:WorkflowViewState.IdRef="If_3">
                     <If.Condition>
                       <InArgument x:TypeArguments="x:Boolean">
                         <mca:CSharpValue x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="CSharpValue`1_47">in_action.ToUpper()=="PUBLISH"</mca:CSharpValue>
                       </InArgument>
                     </If.Condition>
                     <If.Then>
-                      <Sequence sap:VirtualizedContainerService.HintSize="526,1664" sap2010:WorkflowViewState.IdRef="Sequence_21">
+                      <Sequence sap:VirtualizedContainerService.HintSize="526,1974" sap2010:WorkflowViewState.IdRef="Sequence_21">
                         <Sequence.Variables>
                           <Variable x:TypeArguments="x:Boolean" Name="eleExist" />
                         </Sequence.Variables>
@@ -1384,6 +1396,7 @@
                             </ui:Target>
                           </ui:Click.Target>
                         </ui:Click>
+                        <Delay Duration="00:00:05" sap:VirtualizedContainerService.HintSize="484,22" sap2010:WorkflowViewState.IdRef="Delay_19" />
                         <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'SPAN'" sap:VirtualizedContainerService.HintSize="484,106" sap2010:WorkflowViewState.IdRef="Click_16" KeyModifiers="None" MouseButton="BTN_LEFT">
                           <ui:Click.CursorPosition>
                             <ui:CursorPosition Position="Center">
@@ -1406,6 +1419,7 @@
                             </ui:Target>
                           </ui:Click.Target>
                         </ui:Click>
+                        <Delay Duration="00:00:05" sap:VirtualizedContainerService.HintSize="484,22" sap2010:WorkflowViewState.IdRef="Delay_20" />
                         <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'SPAN'" sap:VirtualizedContainerService.HintSize="484,106" sap2010:WorkflowViewState.IdRef="Click_17" KeyModifiers="None" MouseButton="BTN_LEFT">
                           <ui:Click.CursorPosition>
                             <ui:CursorPosition Position="Center">
@@ -1428,7 +1442,8 @@
                             </ui:Target>
                           </ui:Click.Target>
                         </ui:Click>
-                        <ui:TypeInto AlterIfDisabled="{x:Null}" ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" EmptyField="{x:Null}" SendWindowMessages="{x:Null}" SimulateType="{x:Null}" Activate="True" DisplayName="Type List Name" sap:VirtualizedContainerService.HintSize="484,134" sap2010:WorkflowViewState.IdRef="TypeInto_2">
+                        <Delay Duration="00:00:05" sap:VirtualizedContainerService.HintSize="484,22" sap2010:WorkflowViewState.IdRef="Delay_21" />
+                        <ui:TypeInto AlterIfDisabled="{x:Null}" ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" EmptyField="{x:Null}" SendWindowMessages="{x:Null}" Activate="True" DisplayName="Type List Name" sap:VirtualizedContainerService.HintSize="484,134" sap2010:WorkflowViewState.IdRef="TypeInto_2" SimulateType="True">
                           <ui:TypeInto.Target>
                             <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="def39c08-64d8-4f44-b223-4beb22347261" InformativeScreenshot="747314e7b8af8b663314a286860ef140" Selector="&lt;html app='chrome.exe' title='CaffeineUi' /&gt;&lt;webctrl tag='INPUT' /&gt;">
                               <ui:Target.TimeoutMS>
@@ -1445,6 +1460,7 @@
                             </InArgument>
                           </ui:TypeInto.Text>
                         </ui:TypeInto>
+                        <Delay Duration="00:00:05" sap:VirtualizedContainerService.HintSize="484,22" sap2010:WorkflowViewState.IdRef="Delay_22" />
                         <ui:UiElementExists DisplayName="Element Exists 'TD'" sap:VirtualizedContainerService.HintSize="484,106" sap2010:WorkflowViewState.IdRef="UiElementExists_3">
                           <ui:UiElementExists.Exists>
                             <OutArgument x:TypeArguments="x:Boolean">
@@ -1462,14 +1478,14 @@
                             </ui:Target>
                           </ui:UiElementExists.Target>
                         </ui:UiElementExists>
-                        <If sap:VirtualizedContainerService.HintSize="484,814" sap2010:WorkflowViewState.IdRef="If_8">
+                        <If sap:VirtualizedContainerService.HintSize="484,876" sap2010:WorkflowViewState.IdRef="If_8">
                           <If.Condition>
                             <InArgument x:TypeArguments="x:Boolean">
                               <mca:CSharpValue x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="CSharpValue`1_53">eleExist</mca:CSharpValue>
                             </InArgument>
                           </If.Condition>
                           <If.Then>
-                            <Sequence sap:VirtualizedContainerService.HintSize="376,627" sap2010:WorkflowViewState.IdRef="Sequence_31">
+                            <Sequence sap:VirtualizedContainerService.HintSize="376,689" sap2010:WorkflowViewState.IdRef="Sequence_31">
                               <sap:WorkflowViewStateService.ViewState>
                                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -1497,6 +1513,7 @@
                                   </ui:Target>
                                 </ui:Click.Target>
                               </ui:Click>
+                              <Delay Duration="00:00:05" sap:VirtualizedContainerService.HintSize="334,22" sap2010:WorkflowViewState.IdRef="Delay_23" />
                               <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="334,91" sap2010:WorkflowViewState.IdRef="LogMessage_5" Level="Info">
                                 <ui:LogMessage.Message>
                                   <InArgument x:TypeArguments="x:Object">
