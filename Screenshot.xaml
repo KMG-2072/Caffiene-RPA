@@ -3,7 +3,7 @@
     <x:Property Name="in_fileName" Type="InArgument(x:String)" />
   </x:Members>
   <sap2010:ExpressionActivityEditor.ExpressionActivityEditor>C#</sap2010:ExpressionActivityEditor.ExpressionActivityEditor>
-  <sap:VirtualizedContainerService.HintSize>768,515</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>390,435</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>ActivityBuilder_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -87,7 +87,7 @@
         </OutArgument>
       </ui:TakeScreenshot.Screenshot>
       <ui:TakeScreenshot.Target>
-        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="d6824592-7cf9-4ff0-8256-a7afe8b411e6" InformativeScreenshot="487078cfe04dc3a88e44a0d1c454aa33" Selector="&lt;wnd app='chrome.exe' cls='Chrome_WidgetWin_1' title='*' /&gt;">
+        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="d6824592-7cf9-4ff0-8256-a7afe8b411e6" InformativeScreenshot="487078cfe04dc3a88e44a0d1c454aa33" Selector="&lt;wnd app='chrome.exe' cls='Chrome_WidgetWin_1' title='*Caffeine*' /&gt;">
           <ui:Target.TimeoutMS>
             <InArgument x:TypeArguments="x:Int32" />
           </ui:Target.TimeoutMS>
