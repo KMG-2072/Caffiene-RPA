@@ -4,6 +4,8 @@
     <x:Property Name="in_location" Type="InArgument(x:String)" />
     <x:Property Name="in_action" Type="InArgument(x:String)" />
     <x:Property Name="URL_DT" Type="InArgument(scg:Dictionary(x:String, x:String))" />
+    <x:Property Name="FiltersDT" Type="InArgument(sd:DataTable)" />
+    <x:Property Name="GroupsDT" Type="InArgument(sd:DataTable)" />
   </x:Members>
   <sap2010:ExpressionActivityEditor.ExpressionActivityEditor>C#</sap2010:ExpressionActivityEditor.ExpressionActivityEditor>
   <sap:VirtualizedContainerService.HintSize>1363,9030</sap:VirtualizedContainerService.HintSize>
@@ -309,19 +311,19 @@
             <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_1">
               <ui:AssignOperation.To>
                 <OutArgument x:TypeArguments="s:String[]">
-                  <mca:CSharpReference x:TypeArguments="s:String[]" sap2010:WorkflowViewState.IdRef="CSharpReference`1_18">Groups</mca:CSharpReference>
+                  <mca:CSharpReference x:TypeArguments="s:String[]" sap2010:WorkflowViewState.IdRef="CSharpReference`1_24">Groups</mca:CSharpReference>
                 </OutArgument>
               </ui:AssignOperation.To>
               <ui:AssignOperation.Value>
                 <InArgument x:TypeArguments="s:String[]">
-                  <mca:CSharpValue x:TypeArguments="s:String[]" sap2010:WorkflowViewState.IdRef="CSharpValue`1_87">in_row["Groups and Filters"].ToString().Split(',').Where(x=&gt;x.Contains("Group")).ToArray()</mca:CSharpValue>
+                  <mca:CSharpValue x:TypeArguments="s:String[]" sap2010:WorkflowViewState.IdRef="CSharpValue`1_104">in_row["Groups and Filters"].ToString().Split(',').Where(x=&gt;x.Contains("Group")).ToArray()</mca:CSharpValue>
                 </InArgument>
               </ui:AssignOperation.Value>
             </ui:AssignOperation>
             <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_2">
               <ui:AssignOperation.To>
                 <OutArgument x:TypeArguments="s:String[]">
-                  <mca:CSharpReference x:TypeArguments="s:String[]" sap2010:WorkflowViewState.IdRef="CSharpReference`1_19">Filters</mca:CSharpReference>
+                  <mca:CSharpReference x:TypeArguments="s:String[]" sap2010:WorkflowViewState.IdRef="CSharpReference`1_25">Filters</mca:CSharpReference>
                 </OutArgument>
               </ui:AssignOperation.To>
               <ui:AssignOperation.Value>
@@ -375,16 +377,29 @@
       <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke Add-Filters workflow" sap:VirtualizedContainerService.HintSize="526,112" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_18" UnSafe="False" WorkflowFileName="Add-Filters.xaml">
         <ui:InvokeWorkflowFile.Arguments>
           <InArgument x:TypeArguments="s:String[]" x:Key="in_filters">
-            <mca:CSharpValue x:TypeArguments="s:String[]" sap2010:WorkflowViewState.IdRef="CSharpValue`1_86">Filters</mca:CSharpValue>
+            <mca:CSharpValue x:TypeArguments="s:String[]" sap2010:WorkflowViewState.IdRef="CSharpValue`1_102">Filters</mca:CSharpValue>
           </InArgument>
-          <InArgument x:TypeArguments="x:Int32" x:Key="in_filterId">1</InArgument>
-          <InArgument x:TypeArguments="x:Int32" x:Key="in_varId">1</InArgument>
+          <InArgument x:TypeArguments="x:Int32" x:Key="in_filterId">
+            <Literal x:TypeArguments="x:Int32" Value="1" />
+          </InArgument>
+          <InArgument x:TypeArguments="x:Int32" x:Key="in_varId">
+            <Literal x:TypeArguments="x:Int32" Value="1" />
+          </InArgument>
+          <InArgument x:TypeArguments="sd:DataTable" x:Key="FiltersDT">
+            <mca:CSharpValue x:TypeArguments="sd:DataTable" sap2010:WorkflowViewState.IdRef="CSharpValue`1_103">FiltersDT</mca:CSharpValue>
+          </InArgument>
         </ui:InvokeWorkflowFile.Arguments>
       </ui:InvokeWorkflowFile>
       <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke Filter Groups workflow" sap:VirtualizedContainerService.HintSize="526,112" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_1" UnSafe="False" WorkflowFileName="Filter Groups.xaml">
         <ui:InvokeWorkflowFile.Arguments>
           <InArgument x:TypeArguments="s:String[]" x:Key="In_groups">
-            <mca:CSharpValue x:TypeArguments="s:String[]" sap2010:WorkflowViewState.IdRef="CSharpValue`1_84">Groups</mca:CSharpValue>
+            <mca:CSharpValue x:TypeArguments="s:String[]" sap2010:WorkflowViewState.IdRef="CSharpValue`1_105">Groups</mca:CSharpValue>
+          </InArgument>
+          <InArgument x:TypeArguments="sd:DataTable" x:Key="FiltersDT">
+            <mca:CSharpValue x:TypeArguments="sd:DataTable" sap2010:WorkflowViewState.IdRef="CSharpValue`1_106">FiltersDT</mca:CSharpValue>
+          </InArgument>
+          <InArgument x:TypeArguments="sd:DataTable" x:Key="GroupsDT">
+            <mca:CSharpValue x:TypeArguments="sd:DataTable" sap2010:WorkflowViewState.IdRef="CSharpValue`1_107">GroupsDT</mca:CSharpValue>
           </InArgument>
         </ui:InvokeWorkflowFile.Arguments>
       </ui:InvokeWorkflowFile>
