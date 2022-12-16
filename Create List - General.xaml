@@ -8,7 +8,7 @@
     <x:Property Name="GroupsDT" Type="InArgument(sd:DataTable)" />
   </x:Members>
   <sap2010:ExpressionActivityEditor.ExpressionActivityEditor>C#</sap2010:ExpressionActivityEditor.ExpressionActivityEditor>
-  <sap:VirtualizedContainerService.HintSize>1363,9030</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1363,7151</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>ActivityBuilder_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -90,13 +90,13 @@
       <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="Create_List___Contacts" sap:VirtualizedContainerService.HintSize="610,8965" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="Create_List___Contacts" sap:VirtualizedContainerService.HintSize="610,7086" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <Sequence DisplayName="Create_List" sap:VirtualizedContainerService.HintSize="568,8873" sap2010:WorkflowViewState.IdRef="Sequence_30">
+    <Sequence DisplayName="Create_List" sap:VirtualizedContainerService.HintSize="568,6994" sap2010:WorkflowViewState.IdRef="Sequence_30">
       <Sequence.Variables>
         <Variable x:TypeArguments="x:String" Name="type" />
         <Variable x:TypeArguments="sd:DataTable" Name="FilteredData" />
@@ -440,6 +440,28 @@
           </ui:Target>
         </ui:UiElementExists.Target>
       </ui:UiElementExists>
+      <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'BUTTON'" sap:VirtualizedContainerService.HintSize="526,106" sap2010:WorkflowViewState.IdRef="Click_29" KeyModifiers="None" MouseButton="BTN_LEFT" SimulateClick="True">
+        <ui:Click.CursorPosition>
+          <ui:CursorPosition Position="Center">
+            <ui:CursorPosition.OffsetX>
+              <InArgument x:TypeArguments="x:Int32" />
+            </ui:CursorPosition.OffsetX>
+            <ui:CursorPosition.OffsetY>
+              <InArgument x:TypeArguments="x:Int32" />
+            </ui:CursorPosition.OffsetY>
+          </ui:CursorPosition>
+        </ui:Click.CursorPosition>
+        <ui:Click.Target>
+          <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="89c4850f-28de-4c99-ac42-c8160bfbf893" InformativeScreenshot="1e64e67bc0ca2b58ebc922cb500ad7e2" Selector="&lt;html app='chrome.exe' title='CaffeineUi' /&gt;&lt;webctrl parentid='headingThree' tag='BUTTON' /&gt;">
+            <ui:Target.TimeoutMS>
+              <InArgument x:TypeArguments="x:Int32" />
+            </ui:Target.TimeoutMS>
+            <ui:Target.WaitForReady>
+              <InArgument x:TypeArguments="ui:WaitForReady" />
+            </ui:Target.WaitForReady>
+          </ui:Target>
+        </ui:Click.Target>
+      </ui:Click>
       <If sap:VirtualizedContainerService.HintSize="526,301" sap2010:WorkflowViewState.IdRef="If_1">
         <If.Condition>
           <InArgument x:TypeArguments="x:Boolean">
@@ -963,7 +985,7 @@
           </InArgument>
         </ui:LogMessage.Message>
       </ui:LogMessage>
-      <If sap:VirtualizedContainerService.HintSize="526,2076" sap2010:WorkflowViewState.IdRef="If_5">
+      <If sap:VirtualizedContainerService.HintSize="526,51" sap2010:WorkflowViewState.IdRef="If_5">
         <If.Condition>
           <InArgument x:TypeArguments="x:Boolean">
             <mca:CSharpValue x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="CSharpValue`1_36">in_row["Type"].ToString()=="Static"</mca:CSharpValue>
@@ -971,7 +993,7 @@
         </If.Condition>
         <sap:WorkflowViewStateService.ViewState>
           <scg:Dictionary x:TypeArguments="x:String, x:Object">
-            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+            <x:Boolean x:Key="IsExpanded">False</x:Boolean>
             <x:Boolean x:Key="IsPinned">False</x:Boolean>
           </scg:Dictionary>
         </sap:WorkflowViewStateService.ViewState>
