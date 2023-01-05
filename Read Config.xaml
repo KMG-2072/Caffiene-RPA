@@ -11,9 +11,10 @@
     <x:Property Name="Contact_DT" Type="OutArgument(sd:DataTable)" />
     <x:Property Name="FiltersDT" Type="OutArgument(sd:DataTable)" />
     <x:Property Name="GroupsData" Type="OutArgument(sd:DataTable)" />
+    <x:Property Name="TemplateList_DT" Type="OutArgument(sd:DataTable)" />
   </x:Members>
   <sap2010:ExpressionActivityEditor.ExpressionActivityEditor>C#</sap2010:ExpressionActivityEditor.ExpressionActivityEditor>
-  <sap:VirtualizedContainerService.HintSize>1363,2209</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>768,2336</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>ActivityBuilder_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -90,7 +91,7 @@
       <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="Read_Config" sap:VirtualizedContainerService.HintSize="380,2144" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="Read_Config" sap:VirtualizedContainerService.HintSize="380,2271" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="sd:DataTable" Name="Credentials_DT" />
       <Variable x:TypeArguments="sd:DataTable" Name="url_DT" />
@@ -406,5 +407,17 @@
         </InArgument>
       </Assign.Value>
     </Assign>
+    <ui:ReadRange Range="{x:Null}" AddHeaders="True" DisplayName="Read Range" sap:VirtualizedContainerService.HintSize="338,87" sap2010:WorkflowViewState.IdRef="ReadRange_12" SheetName="Template List Data">
+      <ui:ReadRange.DataTable>
+        <OutArgument x:TypeArguments="sd:DataTable">
+          <mca:CSharpReference x:TypeArguments="sd:DataTable" sap2010:WorkflowViewState.IdRef="CSharpReference`1_23">TemplateList_DT</mca:CSharpReference>
+        </OutArgument>
+      </ui:ReadRange.DataTable>
+      <ui:ReadRange.WorkbookPath>
+        <InArgument x:TypeArguments="x:String">
+          <mca:CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_32">Environment.GetFolderPath(Environment.SpecialFolder.Desktop)+"\\Caffiene Automation Config\\Config.xlsx"</mca:CSharpValue>
+        </InArgument>
+      </ui:ReadRange.WorkbookPath>
+    </ui:ReadRange>
   </Sequence>
 </Activity>
